@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { NavLink } from "react-router";
 
 type IconProps = { className?: string }
 
@@ -92,7 +93,7 @@ function App() {
           <a href="#artists" className="nav-link">Для артистов</a>
         </nav>
         <div className="hidden items-center gap-3 md:flex">
-          <button className="rounded-full px-5 py-2.5 text-sm text-white/70 transition hover:text-white">Войти</button>
+          <NavLink to='/auth'><button className="rounded-full px-5 py-2.5 text-sm text-white/70 transition hover:text-white" >Войти</button></NavLink>
           <button onClick={scrollToChains} className="button-light">Начать создавать</button>
         </div>
         <button onClick={() => setMenuOpen(!menuOpen)} className="p-2 md:hidden" aria-label="Открыть меню">
