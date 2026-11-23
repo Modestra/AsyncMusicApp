@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Unbounded:wght@400;500;600&display=swap');
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Unbounded:wght@400;500;600&display=swap");
+@import "tailwindcss";
 
 @theme {
-  --font-sans: 'Manrope', sans-serif;
-  --font-display: 'Unbounded', sans-serif;
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Unbounded", sans-serif;
 }
 
 @layer base {
@@ -15,10 +15,11 @@
   body {
     min-width: 320px;
     background: #0c0d0c;
-    font-family: 'Manrope', sans-serif;
+    font-family: "Manrope", sans-serif;
   }
 
-  button, a {
+  button,
+  a {
     cursor: pointer;
   }
 
@@ -30,7 +31,7 @@
 
 @layer components {
   .font-display {
-    font-family: 'Unbounded', sans-serif;
+    font-family: "Unbounded", sans-serif;
   }
 
   .nav-link {
@@ -48,7 +49,9 @@
     color: #11120f;
     font-size: 13px;
     font-weight: 600;
-    transition: transform 180ms ease, background 180ms ease;
+    transition:
+      transform 180ms ease,
+      background 180ms ease;
   }
 
   .button-light:hover {
@@ -56,14 +59,17 @@
     background: #d9ff43;
   }
 
-  .button-accent, .button-dark {
+  .button-accent,
+  .button-dark {
     display: flex;
     align-items: center;
     border-radius: 999px;
     padding: 15px 22px;
     font-size: 13px;
     font-weight: 600;
-    transition: transform 180ms ease, background 180ms ease;
+    transition:
+      transform 180ms ease,
+      background 180ms ease;
   }
 
   .button-accent {
@@ -71,18 +77,19 @@
     color: #11120f;
   }
 
-  .button-accent:hover, .button-dark:hover {
+  .button-accent:hover,
+  .button-dark:hover {
     transform: translateY(-2px);
   }
 
   .button-dark {
-    border: 1px solid rgba(255,255,255,.12);
-    background: rgba(255,255,255,.045);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.045);
     color: #f2f2ed;
   }
 
   .button-dark:hover {
-    background: rgba(255,255,255,.08);
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .logo-mark {
@@ -103,17 +110,27 @@
     background: #11120f;
   }
 
-  .logo-mark i:nth-child(1) { height: 8px; }
-  .logo-mark i:nth-child(2) { height: 15px; }
-  .logo-mark i:nth-child(3) { height: 11px; }
+  .logo-mark i:nth-child(1) {
+    height: 8px;
+  }
+  .logo-mark i:nth-child(2) {
+    height: 15px;
+  }
+  .logo-mark i:nth-child(3) {
+    height: 11px;
+  }
 
   .player-shell {
     position: relative;
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 28px;
-    background: linear-gradient(145deg, rgba(40,43,39,.92), rgba(21,23,21,.96));
+    background: linear-gradient(
+      145deg,
+      rgba(40, 43, 39, 0.92),
+      rgba(21, 23, 21, 0.96)
+    );
     padding: 26px;
-    box-shadow: 0 35px 90px rgba(0,0,0,.4);
+    box-shadow: 0 35px 90px rgba(0, 0, 0, 0.4);
   }
 
   .layer-row {
@@ -122,15 +139,15 @@
     align-items: center;
     gap: 12px;
     border-radius: 12px;
-    border: 1px solid rgba(255,255,255,.06);
-    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.025);
     padding: 8px 12px;
   }
 
   .layer-next {
     border-style: dashed;
-    border-color: rgba(217,255,67,.3);
-    background: rgba(217,255,67,.03);
+    border-color: rgba(217, 255, 67, 0.3);
+    background: rgba(217, 255, 67, 0.03);
   }
 
   .layer-avatar {
@@ -160,16 +177,19 @@
     flex: 1;
     border-radius: 2px;
     background: currentColor;
-    opacity: .62;
+    opacity: 0.62;
   }
 
-  .play-button, .small-play {
+  .play-button,
+  .small-play {
     display: flex;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    transition: transform 180ms ease, background 180ms ease;
+    transition:
+      transform 180ms ease,
+      background 180ms ease;
   }
 
   .play-button {
@@ -182,34 +202,37 @@
   .small-play {
     height: 38px;
     width: 38px;
-    border: 1px solid rgba(255,255,255,.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     color: white;
   }
 
-  .play-button:hover, .small-play:hover {
+  .play-button:hover,
+  .small-play:hover {
     transform: scale(1.06);
   }
 
   .section-label {
     font-size: 11px;
     font-weight: 600;
-    letter-spacing: .17em;
+    letter-spacing: 0.17em;
     text-transform: uppercase;
     color: #d9ff43;
   }
 
   .project-card {
-    border: 1px solid rgba(255,255,255,.09);
+    border: 1px solid rgba(255, 255, 255, 0.09);
     border-radius: 22px;
     background: #181a17;
     padding: 24px;
-    color: rgba(242,242,237,.85);
-    transition: transform 240ms ease, border-color 240ms ease;
+    color: rgba(242, 242, 237, 0.85);
+    transition:
+      transform 240ms ease,
+      border-color 240ms ease;
   }
 
   .project-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(255,255,255,.18);
+    border-color: rgba(255, 255, 255, 0.18);
   }
 
   .hero-glow {
@@ -219,9 +242,14 @@
     height: 420px;
     width: 420px;
     border-radius: 50%;
-    background: rgba(217,255,67,.07);
+    background: rgba(217, 255, 67, 0.07);
     filter: blur(110px);
     pointer-events: none;
+  }
+
+  .input-base {
+    background-color: rgba(255, 255, 255, 0.12);
+    height: 32px;
   }
 }
 
@@ -236,13 +264,20 @@
     padding-inline: 9px;
   }
 
-  .button-accent, .button-dark {
+  .button-accent,
+  .button-dark {
     justify-content: center;
     width: 100%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { transition-duration: .01ms !important; }
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
