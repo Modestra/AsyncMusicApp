@@ -1,17 +1,27 @@
 import { InputTitle } from "@/components/input";
-import { useState } from "react";
-
-interface RegisterForm {
-  email: string;
-  password: string;
-}
+import { useEffect, useState } from "react";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { auth } from "@/service/firebase";
 
 export function AuthPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+      }
+    });
+    return () => {
+      unsubscribe();
+    };
+  });
+
   function registerUser() {
-    console.log(email, password);
+    createUserWithEmailAndPassword(auth, email, password);
   }
   return (
     <main className="min-h-screen flex flex-row justify-center items-center bg-[#0c0d0c] text-[#f2f2ed]">
